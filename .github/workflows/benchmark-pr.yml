@@ -29,7 +29,7 @@ jobs:
       - name: Run perf analysis
         run: |
           # Run perf and save output
-          perf stat -e LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses ./benchmark 2> perf.txt || true
+          sudo perf stat -e LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses ./benchmark 2> perf.txt || true
           
           # Extract LLC miss rate
           LLC_LOAD_MISSES=$(grep "LLC-load-misses" perf.txt | awk '{print $1}' | tr -d ',')
