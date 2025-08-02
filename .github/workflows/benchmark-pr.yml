@@ -1,5 +1,5 @@
 
-name: Benchmark Performance Analysis
+name: Benchmark Performance-Analysis
 
 on:
   pull_request:
