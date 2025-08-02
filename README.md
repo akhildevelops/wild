@@ -129,6 +129,7 @@ zig build-exe src/main.zig -O ReleaseSafe
 zig run benchmark.zig -O ReleaseFast -fstrip
 
 # Run tests
+
 zig build test
 ```
 
